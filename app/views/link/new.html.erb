@@ -1,0 +1,13 @@
+<h1>Novo link</h1>
+
+<%= form_for @link, url: new_link_path do |link| %>
+
+  <%= label_tag "Titulo:" %>
+  <%= link.text_field :title %><br>
+
+  <%= label_tag "URL:" %>
+  <%= link.text_field :url %><br>
+
+  <%= link.submit "Enviar" %>
+
+<% end %>
