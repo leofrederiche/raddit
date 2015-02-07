@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   
   devise_for :users
-  get "/", to: "welcome#index", as: :root
+  root to: "welcome#index"
 
-  get "/novo-link", to: "link#new", as: :new_link
-  post "/novo-link", to: "link#create", as: false
+  get "/novo-link", to: "links#new", as: :new_link
+  post "/novo-link", to: "links#create", as: false
 
 end
