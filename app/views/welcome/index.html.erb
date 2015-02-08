@@ -8,8 +8,22 @@
   
   <div class="link-container">
     <% @user = User.find_by_id link.user_id %>
+
+    <% @porcentage = link.get_likes.size * 100 / link.votes_for.size %>
+
+    <%= link_to new_uplike_path(link.id) do |uplike| %>
+      <%= image_tag "png/triangle3.png", class: "rotate-180" %>
+    <% end %>
+
+    <%= "#{link.get_likes.size} - #{@porcentage}%" %> 
+
+    <%= link_to new_downlike_path(link.id) do |downlike| %>
+      <%= image_tag "png/triangle3.png" %>
+    <% end %>
+
     <%= link_to link.title, link.url, target: "_blank" %> - 
     <%= @user.name %>
+    
   </div>
 
 <% end %>

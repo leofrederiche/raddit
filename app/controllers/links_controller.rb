@@ -11,6 +11,8 @@ class LinksController < ApplicationController
       @link = Link.create(link_params)
       @link.user_id = current_user.id
 
+      @link.liked_by current_user
+
       if @link.save
         redirect_to root_path
       else
