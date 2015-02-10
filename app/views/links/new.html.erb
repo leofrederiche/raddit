@@ -2,11 +2,11 @@
 
 <%= form_for @link, url: new_link_path do |link| %>
 
-  <%= label_tag "Titulo:" %>
+  <%= label_tag "Titulo" %><br>
   <%= link.text_field :title %><br>
 
-  <%= label_tag "URL:" %>
-  <%= link.text_field :url %><br>
+  <%= label_tag "URL" %><br>
+  <%= link.text_field :url %><br><br>
 
   <%= link.submit "Enviar" %>
 

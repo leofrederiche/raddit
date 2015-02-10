@@ -11,20 +11,24 @@
 
     <% @porcentage = link.get_likes.size * 100 / link.votes_for.size %>
 
-    <%= link_to new_uplike_path(link.id) do |uplike| %>
-      <%= image_tag "png/triangle3.png", class: "rotate-180" %>
-    <% end %>
+    <div class="votation">
+      <%= link_to new_uplike_path(link.id) do |uplike| %>
+        <%= image_tag "png/triangle3.png", class: "rotate-180" %>
+      <% end %><br>
 
-    <%= "#{link.get_likes.size} - #{@porcentage}%" %> 
+      <%= "#{link.get_likes.size} - #{@porcentage}%" %> <br>
 
-    <%= link_to new_downlike_path(link.id) do |downlike| %>
-      <%= image_tag "png/triangle3.png" %>
-    <% end %>
+      <%= link_to new_downlike_path(link.id) do |downlike| %>
+        <%= image_tag "png/triangle3.png" %>
+      <% end %>
+    </div>
 
-    <%= link_to link.title, link.url, target: "_blank" %> 
-    (<%= @user.name %>) -
+    <div class="link-info">
+      <%= link_to link.title, link.url, target: "_blank" %> 
+      (<%= @user.name %>) -
 
-    <%= link_to "Comentarios (#{link.link_comments.count})", show_link_path(link.id) %>
+      <%= link_to "Comentarios (#{link.link_comments.count})", show_link_path(link.id) %>
+    </div>
     
   </div>
 

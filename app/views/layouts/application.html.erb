@@ -9,22 +9,13 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <p><%= current_user.name if current_user %></p>
-
-  <%= link_to "Inicio", root_path %>
-  <%= link_to "Cadastro", "/users/sign_up" %>
-  <%= link_to "Login", "/users/sign_in" %>
-  <%= link_to "Sair", destroy_user_session_path, method: :delete, :class => 'navbar-link' if current_user %>
+  <%= navbar %>
 
 <%= yield %>
 

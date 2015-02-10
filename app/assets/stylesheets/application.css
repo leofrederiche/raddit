@@ -20,3 +20,33 @@
   -ms-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
  }
+
+ body{
+  padding: 50px;
+ }
+
+ .link-container{
+  margin-bottom: 65px;
+  border-top: 1px solid rgba(0,0,0,0.2);
+ }
+
+ .votation{
+  position: relative;
+  float: left;
+  text-align: center;
+ }
+
+ .link-info{
+  position: relative;
+  padding-top: 63px;
+  left: 30px;
+ }
+ 
+.comment{
+  font-size: 110%;
+  border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+.comment small{
+  color: purple;
+}

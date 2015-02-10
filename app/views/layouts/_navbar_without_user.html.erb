@@ -1,0 +1,13 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+      <%= link_to "Raddit", root_path, class: "navbar-brand" %>
+
+      <p class="navbar-text navbar-right"><%= link_to "Sair", destroy_user_session_path, method: :delete, :class => 'navbar-link', class: "navbar-link" if current_user %></p>
+      <p class="navbar-text navbar-right">
+        <small>logado com</small> <%= current_user.name %>
+      </p>
+      <p class="notice navbar-text navbar-right"><%= notice %></p>
+
+    </div>
+  </div>
+</nav>

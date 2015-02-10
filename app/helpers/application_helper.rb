@@ -6,4 +6,12 @@ module ApplicationHelper
     end
   end
 
+  def navbar
+    unless current_user
+      render "layouts/navbar_with_user"
+    else
+      render "layouts/navbar_without_user"
+    end
+  end
+
 end
