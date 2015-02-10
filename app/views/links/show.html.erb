@@ -1,0 +1,13 @@
+<h1><%= @link.title %> <small>(<%= @user.name %>)</small> </h1>
+
+<%= link_to @link.url, @link.url, target: "_blank" %>
+
+<%= new_comment %>
+
+<h4>Comentarios</h4>
+
+<% @comments.reverse.each do |comment| %>
+  <% @by = User.find_by_id(comment.id_user) %>
+  <p><%= comment.comment %> - <small><%= @by.name %></small></p> 
+<% end %>
+

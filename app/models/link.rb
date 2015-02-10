@@ -2,6 +2,9 @@ class Link < ActiveRecord::Base
   
   validates_presence_of :url, :title
   validate :validate_link_format
+
+  has_many :link_comments, class_name: Comment, foreign_key: :id_link
+
   acts_as_votable
 
   def validate_link_format

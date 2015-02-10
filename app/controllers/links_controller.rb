@@ -26,6 +26,14 @@ class LinksController < ApplicationController
     
   end
 
+  def show
+    @new_comment = Comment.new
+    @link = Link.find params[:id]
+    @user = User.find_by_id(@link.user_id)
+    
+    @comments = @link.link_comments
+  end
+
   private
   def link_params
     params.require(:link).permit(:title, :url, :user_id)

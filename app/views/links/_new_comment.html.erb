@@ -1,0 +1,4 @@
+<%= form_for @new_comment, url: show_link_path do |comment| %>
+  <%= comment.text_field :comment, placeholder: "Seu comentario" %>
+  <%= comment.submit "Enviar" %>
+<% end %>
