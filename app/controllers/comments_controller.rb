@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
     if @new_comment.save
       redirect_to show_link_path(@link.id)
     else
-      flash[:notice] = "Ops, algo deu errado, tente novamente."
+      flash[:notice] = "Ocorreu algum erro, verifique se o comentário não está vazio."
       redirect_to show_link_path(@link.id)
     end
 

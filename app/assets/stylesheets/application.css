@@ -21,6 +21,11 @@
   -moz-transform: rotate(180deg);
  }
 
+ .up-link{
+  position: relative;
+  z-index: 10;
+ }
+
  body{
   padding: 50px;
  }
@@ -49,4 +54,9 @@
 
 .comment small{
   color: purple;
+}
+
+.errors{
+  margin: 0px;
+  color: rgba(255,0,0,0.65);
 }

@@ -9,7 +9,7 @@ class Link < ActiveRecord::Base
 
   def validate_link_format
     unless url.starts_with? "http://"  or  url.starts_with? "https://"
-      errors.add(:url, "Insira um link valido.")
+      errors.add(:url, "Insira um link valido")
     end
   end
   

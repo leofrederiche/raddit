@@ -12,7 +12,7 @@
     <% @porcentage = link.get_likes.size * 100 / link.votes_for.size %>
 
     <div class="votation">
-      <%= link_to new_uplike_path(link.id) do |uplike| %>
+      <%= link_to new_uplike_path(link.id), class: "up-link" do |uplike| %>
         <%= image_tag "png/triangle3.png", class: "rotate-180" %>
       <% end %><br>
 

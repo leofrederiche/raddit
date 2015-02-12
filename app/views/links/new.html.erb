@@ -2,6 +2,10 @@
 
 <%= form_for @link, url: new_link_path do |link| %>
 
+  <% @link.errors.each do |attr, msg| %>
+    <p class="errors"><%= "#{attr.upcase} - #{msg}" %></p>
+  <% end %><br>
+
   <%= label_tag "Titulo" %><br>
   <%= link.text_field :title %><br>
 
