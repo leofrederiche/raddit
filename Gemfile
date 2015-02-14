@@ -7,6 +7,7 @@ gem 'rails', '4.1.6'
 gem 'sqlite3'
 gem 'devise'
 gem 'acts_as_votable', '~> 0.10.0'
+gem "validate_url"
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
